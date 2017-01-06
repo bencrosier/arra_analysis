@@ -27,4 +27,4 @@ Get raw connection to DB:
 
 ## The Data
 
-The data will be delivered as a pandas dataframe.  All columns that come from the survey data will be prefixed with the the work `survey_`.  All other columns are data derived from the Instagram data.
+The data will be delivered as a pandas dataframe.  All columns that come from the survey data will be prefixed with the the word `survey_`.  All other columns are data derived from the Instagram data.
