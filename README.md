@@ -3,7 +3,7 @@ Analysis for the ARRA Instagram Project
 
 This project is designed to get our researchers going with analysis of the ARRA data.  It is a python package which will contain core functions for accessing the data.
 
-Getting Started
+## Getting Started
 
 create a file in the top-level directory called `.db` and fill it with a 1-line DB connection string, ie:
 
@@ -15,6 +15,12 @@ then you can access this module from your python script just like usual with `im
 
 get the dataset like this:
 
-`dataset = ad.data(refresh = True)` 
+`dataset = arradata.data(refresh = True)` 
 
-leave out the `refresh` kwarg after the first time to access the saved local copy.
+leave out the `refresh` kwarg after the first time to save time and access the saved local copy.
+
+`dataset = arradata.data()`
+
+Get raw connection to DB:
+
+`conn = arradata.get_connection()`
