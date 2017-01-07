@@ -97,7 +97,10 @@ def arradata_raw():
         JOIN main_survey 
         ON main_user.survey_id = main_survey.id 
         LEFT JOIN (
-                   SELECT SUM(likes) AS likes, sum(comments) AS comments, survey_id AS id 
+                   SELECT 
+                       COALESCE( SUM(likes), 0 ) AS likes, 
+                       COALESCE( sum(comments), 0 ) AS comments, 
+                       survey_id AS id 
                    FROM main_instagrammedia 
                    GROUP BY survey_id
                   ) media_totals 
